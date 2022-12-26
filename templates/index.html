@@ -1,0 +1,19 @@
+<h1>Hello World!</h1>
+
+<p>Sup boi</p>
+
+<h3>Teams</h3>
+
+{% for team in nfl_teams %}
+    {{ team }}<br/>
+{% endfor %}
+
+<br/>
+<br/>
+{% for team in nfl_teams %}
+    {% if team|length > 2 %}
+        {{ team }}<br/>
+    {% else %}
+        {{ team }} is too short<br/>
+    {% endif %}
+{% endfor %}
