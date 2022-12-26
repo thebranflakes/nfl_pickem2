@@ -1,19 +1,24 @@
-<h1>Hello World!</h1>
+{% extends 'base.html'%}
 
-<p>Sup boi</p>
+{% block content %}
+    <h1>Hello World!</h1>
 
-<h3>Teams</h3>
+    <p>Sup boi</p>
 
-{% for team in nfl_teams %}
-    {{ team }}<br/>
-{% endfor %}
+    <h3>Teams</h3>
 
-<br/>
-<br/>
-{% for team in nfl_teams %}
-    {% if team|length > 2 %}
+    {% for team in nfl_teams %}
         {{ team }}<br/>
-    {% else %}
-        {{ team }} is too short<br/>
-    {% endif %}
-{% endfor %}
+    {% endfor %}
+
+    <br/>
+    <br/>
+    {% for team in nfl_teams %}
+        {% if team|length > 2 %}
+            {{ team }}<br/>
+        {% else %}
+            {{ team }} is too short<br/>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
