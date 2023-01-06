@@ -5,7 +5,11 @@ h1 {
 
 body {
     background: #252525;
-    color: #fff;
+    color: #808080;
+}
+
+td {
+    color: #808080;
 }
 
 #demo{
